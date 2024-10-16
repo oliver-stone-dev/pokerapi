@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerAppAPI", "PokerAppAPI.csproj", "{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE46FEE9-8C7E-4EF4-AFDA-5E2D86DC3598}
+	EndGlobalSection
+EndGlobal
