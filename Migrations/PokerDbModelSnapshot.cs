@@ -2,7 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PokerAppAPI;
+using PokerAppAPI.Resources;
+using PokerAppAPI.Models;
 
 #nullable disable
 
