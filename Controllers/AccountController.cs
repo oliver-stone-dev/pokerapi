@@ -1,7 +1,9 @@
 ﻿using PokerAppAPI.Models;
 using PokerAppAPI.Resources;
+using PokerAppAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Principal;
 
 namespace PokerAppAPI.Controllers;
 
@@ -9,57 +11,56 @@ namespace PokerAppAPI.Controllers;
 [Route("[controller]")]
 public class AccountsController : ControllerBase
 {
-    private readonly PokerDb _context;
+    //private readonly PokerDb _context;
+    private readonly IAccountService _service;
 
-    public AccountsController(PokerDb context)
+    public AccountsController(IAccountService service)
     {
-        _context = context;
+        _service = service;
     }
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
     {
-        return await _context.Accounts.ToListAsync();
+        var accounts = await _service.GetAccountsASync();
+        return Ok(accounts); 
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Account>> GetAccount(int id)
     {
-        var account = await _context.Accounts.FindAsync(id);
+        var account = await _service.GetAccountByIdASync(id);
 
         if (account == null)
         {
             return NotFound();
         }
 
-        return account;
+        return Ok(account);
     }
 
     [HttpPost]
     public async Task<ActionResult<Account>> PostAccount(Account account)
     {
-        _context.Accounts.Add(account);
+        ServiceResult<Account> result = await _service.AddAccountASync(account);
 
-        await _context.SaveChangesAsync();
+        if (result.ErrorCode == ServiceErrorCodes.None)
+        {
+            return CreatedAtAction(nameof(GetAccount), new { id = account.Id }, account);
+        }
 
-        return CreatedAtAction(nameof(GetAccount), new { id = account.Id }, account);
+        return NoContent();
     }
 
     [HttpPut("{id}")]
     public async Task<ActionResult<Account>> PutAccount(int id, Account newAccount)
     {
-        var account = await _context.Accounts.FindAsync(id);
+        ServiceResult<Account> result = await _service.UpdateAccountASync(id, newAccount);
 
-        if (account == null)
+        if (result.ErrorCode != ServiceErrorCodes.None)
         {
             return NotFound();
         }
-
-        account.Username = newAccount.Username;
-        account.Password = newAccount.Password;
-        account.Chips = newAccount.Chips;
-
-        await _context.SaveChangesAsync();
 
         return Ok();
     }
@@ -67,20 +68,15 @@ public class AccountsController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<ActionResult<Account>> DeleteAccount(int id)
     {
-        var account = await _context.Accounts.FindAsync(id);
+        ServiceResult<Account> result = await _service.DeleteAccountASync(id);
 
-        if (account == null)
+        if (result.ErrorCode != ServiceErrorCodes.None)
         {
             return NotFound();
         }
 
-        _context.Accounts.Remove(account);
-
-        await _context.SaveChangesAsync();
-
         return Ok();
     }
-
 }
 
 

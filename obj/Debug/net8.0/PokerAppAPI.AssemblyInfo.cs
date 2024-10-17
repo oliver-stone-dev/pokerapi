@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PokerAppAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bcb1b6a8b9d7a3c21481f056b8770b071194ffe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b25ebe46875d58cd81c774018afcab053706a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokerAppAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokerAppAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
