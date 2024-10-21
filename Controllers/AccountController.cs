@@ -4,6 +4,7 @@ using PokerAppAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Principal;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PokerAppAPI.Controllers;
 
@@ -19,14 +20,14 @@ public class AccountsController : ControllerBase
         _service = service;
     }
 
-    [HttpGet]
+    [HttpGet(Name = "GetAccounts"), Authorize]
     public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
     {
         var accounts = await _service.GetAccountsASync();
-        return Ok(accounts); 
+        return Ok(accounts);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id}"), Authorize]
     public async Task<ActionResult<Account>> GetAccount(int id)
     {
         var account = await _service.GetAccountByIdASync(id);
@@ -39,7 +40,7 @@ public class AccountsController : ControllerBase
         return Ok(account);
     }
 
-    [HttpPost]
+    [HttpPost, Authorize]
     public async Task<ActionResult<Account>> PostAccount(Account account)
     {
         ServiceResult<Account> result = await _service.AddAccountASync(account);
@@ -52,7 +53,7 @@ public class AccountsController : ControllerBase
         return NoContent();
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("{id}"), Authorize]
     public async Task<ActionResult<Account>> PutAccount(int id, Account newAccount)
     {
         ServiceResult<Account> result = await _service.UpdateAccountASync(id, newAccount);
@@ -65,7 +66,7 @@ public class AccountsController : ControllerBase
         return Ok();
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id}"), Authorize]
     public async Task<ActionResult<Account>> DeleteAccount(int id)
     {
         ServiceResult<Account> result = await _service.DeleteAccountASync(id);

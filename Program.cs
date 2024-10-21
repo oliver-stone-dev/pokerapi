@@ -4,6 +4,8 @@ using PokerAppAPI.Controllers;
 using PokerAppAPI.Models;
 using PokerAppAPI.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace PokerAppAPI;
 
@@ -17,7 +19,19 @@ public class Program
 
         builder.Services.AddEndpointsApiExplorer();
 
-        builder.Services.AddSwaggerGen();
+        //Adds auth token input
+        builder.Services.AddSwaggerGen(options =>
+        {
+            options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+            {
+                In = ParameterLocation.Header,
+                Name = "Authorization",
+                Type = SecuritySchemeType.ApiKey
+            });
+
+            options.OperationFilter<SecurityRequirementsOperationFilter>();
+        }
+        );
 
         //Add sqlserver dependancy and set to use connection string from app settings
         builder.Services.AddDbContext<PokerDb>(options =>
@@ -40,7 +54,7 @@ public class Program
 
         app.UseHttpsRedirection();
 
-        app.UseAuthentication();
+        app.UseAuthorization();
 
         app.MapControllers();
 
