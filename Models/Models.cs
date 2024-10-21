@@ -20,9 +20,9 @@ public class Player
     public bool Folded { get; set; }
     public bool AllIn { get; set; }
 
-    public ICollection<Bet> Bets { get; } = new List<Bet>();
+  //  public ICollection<Bet> Bets { get; } = new List<Bet>();
 
-    public ICollection<Action> Actions { get; } = new List<Action>();
+  //  public ICollection<Event> Actions { get; } = new List<Event>();
 }
 
 //Game item that stores game state.
@@ -43,23 +43,23 @@ public class Game
     public int BetStage { get; set; }
     public ICollection<Player> Players { get; } = new List<Player>();
 
-    public ICollection<Action> Actions { get; } = new List<Action>();
+  //  public ICollection<Event> Actions { get; } = new List<Event>();
 
-    public ICollection<Bet> Bets { get; } = new List<Bet>();
+   // public ICollection<Bet> Bets { get; } = new List<Bet>();
 
-    public ICollection<Pot> Pots { get; } = new List<Pot>();
+   // public ICollection<Pot> Pots { get; } = new List<Pot>();
 }
 
-public class Action
+/*public class Event
 {
     public int Id { get; set; }
     public int GameId { get; set; }
     public int PlayerId { get; set; }
     public int Type { get; set; }
     public int TimeStamp { get; set; }
-}
+}*/
 
-public class Bet
+/*public class Bet
 {
     public int Id { get; set; }
     public int GameId { get; set; }
@@ -67,12 +67,12 @@ public class Bet
     public int PotId { get; set; }
     public int Amount { get; set; }
     public int TimeStamp { get; set; }
-}
+}*/
 
-public class Pot
+/*public class Pot
 {
     public int Id { get; set; }
     public int GameId { get; set; }
     public int Amount { get; set; }
     public int[]? PlayersIds { get; set; } = null;
-}
+}*/

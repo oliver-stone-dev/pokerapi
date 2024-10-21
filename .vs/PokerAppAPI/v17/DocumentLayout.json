@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|c:\\users\\olley\\documents\\development\\pokerapi\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|solutionrelative:accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|c:\\users\\olley\\documents\\development\\pokerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|c:\\users\\olley\\documents\\development\\pokerapi\\pokerappapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|solutionrelative:pokerappapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|c:\\users\\olley\\documents\\development\\pokerapi\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|solutionrelative:models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|c:\\users\\olley\\documents\\development\\pokerapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|c:\\users\\olley\\documents\\development\\pokerapi\\resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3675B88A-7E7F-4BBE-BDB5-7FBABA0ABDFB}|PokerAppAPI.csproj|solutionrelative:resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +34,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAcwEwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T09:38:31.94Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Models.cs",
+              "DocumentMoniker": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\Models\\Models.cs",
+              "RelativeDocumentMoniker": "Models\\Models.cs",
+              "ToolTip": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\Models\\Models.cs",
+              "RelativeToolTip": "Models\\Models.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAYwAsAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T10:00:19.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Resources.cs",
+              "DocumentMoniker": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\Resources.cs",
+              "RelativeDocumentMoniker": "Resources.cs",
+              "ToolTip": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\Resources.cs",
+              "RelativeToolTip": "Resources.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T09:49:55.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PokerAppAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\PokerAppAPI.csproj",
+              "RelativeDocumentMoniker": "PokerAppAPI.csproj",
+              "ToolTip": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\PokerAppAPI.csproj",
+              "RelativeToolTip": "PokerAppAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-21T09:15:52.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\AccountService.cs",
+              "RelativeDocumentMoniker": "AccountService.cs",
+              "ToolTip": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\AccountService.cs",
+              "RelativeToolTip": "AccountService.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAAACAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T14:29:19.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\olley\\Documents\\Development\\pokerapi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAxwD8AAAAgAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T15:08:31.954Z",
               "EditorCaption": ""
