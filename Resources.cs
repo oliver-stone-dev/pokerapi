@@ -4,12 +4,11 @@ using PokerAppAPI.Models;
 
 namespace PokerAppAPI.Resources;
 
-public class PokerDb : IdentityDbContext
+public class PokerDb : IdentityDbContext<Account>
 {
     public PokerDb(DbContextOptions<PokerDb> options) : base(options) { }
-    public DbSet<Account> Accounts { get; set; } = null;
-    public DbSet<Player> Players { get; set; } = null;
-    public DbSet<Game> Games { get; set; } = null;
+    public DbSet<Player> Players { get; set; }
+    public DbSet<Game> Games { get; set; }
     //public DbSet<Event> Events { get; set; } = null;
     //public DbSet<Bet> Bets { get; set; } = null;
    // public DbSet<Pot> Pots { get; set; } = null;

@@ -39,7 +39,7 @@ public class Program
 
         builder.Services.AddAuthorization();
 
-        builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+        builder.Services.AddIdentityApiEndpoints<Account>()
             .AddEntityFrameworkStores<PokerDb>();
 
         builder.Services.AddScoped<IAccountService, AccountService>();

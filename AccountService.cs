@@ -54,13 +54,13 @@ public class AccountService : IAccountService
 
     public async Task<ServiceResult<IEnumerable<Account>>> GetAccountsASync()
     {
-        var accounts = await _context.Accounts.ToListAsync();
+        var accounts = await _context.Users.ToListAsync();
         return ServiceResult<IEnumerable<Account>>.Success(accounts);
     }
 
     public async Task<ServiceResult<Account>> GetAccountByIdASync(int id)
     {
-        var account = await _context.Accounts.FindAsync(id);
+        var account = await _context.Users.FindAsync(id);
 
         if (account == null)
         {
@@ -74,7 +74,7 @@ public class AccountService : IAccountService
     {
         //check username exists
 
-        _context.Accounts.Add(account);
+        _context.Users.Add(account);
 
         await _context.SaveChangesAsync();
 
@@ -83,15 +83,14 @@ public class AccountService : IAccountService
 
     public async Task<ServiceResult<Account>> UpdateAccountASync(int id, Account account)
     {
-        var accountToUpdate = await _context.Accounts.FindAsync(id);
+        var accountToUpdate = await _context.Users.FindAsync(id);
 
         if (accountToUpdate == null)
         {
             return ServiceResult<Account>.Failuire(ServiceErrorCodes.AccountDoesNotExist);
         }
 
-        accountToUpdate.Username = account.Username;
-        accountToUpdate.Password = account.Password;
+        accountToUpdate.UserName = account.UserName;
         accountToUpdate.Chips = account.Chips;
 
         await _context.SaveChangesAsync();
@@ -101,14 +100,14 @@ public class AccountService : IAccountService
 
     public async Task<ServiceResult<Account>> DeleteAccountASync(int id)
     {
-        var accountToDelete = await _context.Accounts.FindAsync(id);
+        var accountToDelete = await _context.Users.FindAsync(id);
 
         if (accountToDelete == null)
         {
             return ServiceResult<Account>.Failuire(ServiceErrorCodes.AccountDoesNotExist);
         }
 
-        _context.Accounts.Remove(accountToDelete);
+        _context.Users.Remove(accountToDelete);
 
         await _context.SaveChangesAsync();
 

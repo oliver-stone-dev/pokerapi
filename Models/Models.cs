@@ -1,12 +1,12 @@
-﻿namespace PokerAppAPI.Models;
+﻿using Microsoft.AspNetCore.Identity;
 
-public class Account
+namespace PokerAppAPI.Models;
+
+//Create custom user account table derived from EF auth indentity user
+public class Account : IdentityUser
 {
-    public int Id { get; set; }
-    public string? Username { get; set; }
-    public string? Password { get; set; }
     public int Chips { get; set; }
-    public ICollection<Player> Players { get; } = new List<Player>();
+    //public ICollection<Player> Players { get; } = new List<Player>();
 }
 
 //Player item for storing player specific game state. Foreign keys to game and account.

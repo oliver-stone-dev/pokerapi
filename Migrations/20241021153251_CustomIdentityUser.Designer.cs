@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PokerAppAPI.Resources;
 
@@ -11,9 +12,11 @@ using PokerAppAPI.Resources;
 namespace PokerAppAPI.Migrations
 {
     [DbContext(typeof(PokerDb))]
-    partial class PokerDbModelSnapshot : ModelSnapshot
+    [Migration("20241021153251_CustomIdentityUser")]
+    partial class CustomIdentityUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
